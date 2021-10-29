@@ -2,10 +2,11 @@ import React from 'react';
 import img from '../../../images/body/bg-01.jpg'
 import { Button } from 'react-bootstrap';
 import google from '../../../images/body/google.png'
-import useFireBase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
+
 const LogIn = () => {
     //call google use firebase function 
-    const { signInUsingGoogle } = useFireBase();
+    const { signInUsingGoogle } = useAuth();
 
     return (
         <div>

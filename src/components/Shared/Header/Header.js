@@ -10,10 +10,11 @@ import {
     NavLink
 } from "react-router-dom";
 import { Button, Col, Container, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
-import useFireBase from '../../../hooks/useFirebase';
+
+import useAuth from '../../../hooks/useAuth';
 const Header = () => {
     //firebase google auth
-    const { user, logOut } = useFireBase();
+    const { user, logOut } = useAuth();
     //style active nav 
 
     const activeStyle = {
@@ -69,8 +70,13 @@ const Header = () => {
 
                                     <NavDropdown title={user.displayName} className="navbar-list dropdown text-end">
 
-                                        <NavDropdown.Item><NavLink className="navbar-list" activeStyle={activeStyle} to="/login">LogIn</NavLink></NavDropdown.Item>
-                                        <NavDropdown.Item><NavLink className="navbar-list" activeStyle={activeStyle} to="/registration">SignUp</NavLink></NavDropdown.Item>
+                                        {!user?.email &&
+                                            <>
+                                                <NavDropdown.Item><NavLink className="navbar-list" activeStyle={activeStyle} to="/login">LogIn</NavLink></NavDropdown.Item>
+                                                <NavDropdown.Item><NavLink className="navbar-list" activeStyle={activeStyle} to="/registration">SignUp</NavLink></NavDropdown.Item>
+                                            </>
+                                        }
+
                                         {user?.email &&
                                             <Button onClick={logOut} className="logout-button">LogOut</Button>
                                         }
