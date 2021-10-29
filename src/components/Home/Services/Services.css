@@ -1,0 +1,37 @@
+.card-body {
+  background-color: rgb(26, 24, 24);
+}
+.card-body h5 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  text-align: center;
+}
+.card-body h5,
+p {
+  color: #ffff;
+}
+.card-body h5:hover {
+  color: #fecb2f;
+}
+.card-img-top:hover {
+  content: "";
+
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.service-title {
+  color: #fecb2f;
+  font-weight: 400;
+  font-size: 42px;
+}
+.text-start h2 {
+  font-family: "Dela Gothic One", cursive;
+
+  font-style: oblique;
+}
+.text-start h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+}

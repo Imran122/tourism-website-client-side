@@ -1,0 +1,12 @@
+.card-btn {
+  color: #ffff;
+  background-color: rgba(1, 164, 121, 0.1);
+
+  border: 1px solid #fecb2f;
+}
+
+.card-btn:hover {
+  background: #fecb2f;
+  transition: all 0.5s ease-in-out 0s;
+  border: 1px solid #fecb2f;
+}

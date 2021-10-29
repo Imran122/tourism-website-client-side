@@ -1,0 +1,61 @@
+.navbar-address {
+  font-family: "Playfair Display", serif;
+  background-color: #fecb2f;
+  color: #ffff;
+  font-size: 12px;
+}
+.main-part-header {
+}
+.navbar-contents {
+  background-image: linear-gradient(
+    rgba(42, 194, 106, 0.911),
+    rgba(10, 61, 30, 0.8)
+  );
+
+  /* sticky or fixed are fine */
+
+  transition: background-image 0.5s;
+}
+.office {
+  background-color: rgb(36, 32, 32);
+}
+.brand-img {
+  height: 40px;
+}
+
+.navbar-list {
+  color: #343a40;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.navbar-list:hover {
+  color: #fecb2f;
+}
+.login-img {
+}
+
+.log-data img {
+  margin-right: 5px;
+}
+.nav-link {
+  color: #343a40;
+}
+.nav-link:hover {
+  color: #fecb2f;
+}
+.dropdown-menu {
+  background-image: linear-gradient(
+    rgba(42, 194, 106, 0.911),
+    rgba(10, 61, 30, 0.8)
+  );
+}
+.dropdown-item:hover {
+  color: #fecb2f;
+  background-image: linear-gradient(
+    rgba(42, 194, 106, 0.911),
+    rgba(10, 61, 30, 0.8)
+  );
+}

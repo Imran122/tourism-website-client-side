@@ -1,0 +1,72 @@
+.guider-content {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../../../images/header/banner1.jpeg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 400px;
+
+  text-align: center;
+}
+
+.column {
+  max-width: 676px;
+  min-width: 320px;
+  margin: 1.5rem auto;
+}
+.grid {
+  color: white;
+  background-color: #fecb2f;
+  display: table;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+.text-box {
+  padding: 1.8rem;
+  min-height: 250px;
+}
+.half-grid {
+  width: 50%;
+  display: table-cell;
+  position: relative;
+  background-color: inherit;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: inherit;
+  vertical-align: middle;
+}
+.half-grid h2 {
+  font-family: "Dela Gothic One", cursive;
+}
+.half-grid h4 {
+  font-family: "Playfair Display", serif;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.left-guider-img {
+  background-color: inherit;
+  left: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+}
+.left-guider-img::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: inherit;
+}
+.left-guider-img::after {
+  left: -10px;
+}
