@@ -1,8 +1,7 @@
 import React from 'react';
 import './Header.css'
 import img from '../../../images/header/logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import userimg from '../../../images/header/user.png'
 import {
     BrowserRouter as Router,
     Switch,
@@ -10,9 +9,11 @@ import {
     Link,
     NavLink
 } from "react-router-dom";
-import { Col, Container, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
+import { Button, Col, Container, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
+import useFireBase from '../../../hooks/useFirebase';
 const Header = () => {
-    const element = <FontAwesomeIcon icon={faCoffee} />
+    //firebase google auth
+    const { user, logOut } = useFireBase();
     //style active nav 
 
     const activeStyle = {
@@ -35,9 +36,9 @@ const Header = () => {
             {/*  navbar part with options*/}
             <header className=" border-bottom">
                 <div className="">
-                    <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start sticky-top">
+                    <div className="d-flex navbar-bg flex-wrap align-items-center justify-content-center justify-content-lg-start sticky-top">
 
-                        <Navbar expand="lg" className="w-100 mx-auto  navbar-contents" >
+                        <Navbar expand="lg" className="w-75 mx-auto  navbar-contents" >
                             <Container fluid >
                                 <Navbar.Brand href="#">
                                     <img src={img} className="brand-img" alt="" />
@@ -51,21 +52,28 @@ const Header = () => {
                                     >
                                         <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/home">Home</NavLink></Nav.Link>
 
-                                        <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/ourservices">My Orders</NavLink></Nav.Link>
+                                        <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/myorders">My Orders</NavLink></Nav.Link>
                                         <Nav.Link> </Nav.Link>
-                                        <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/ourservices">Manage Orders</NavLink></Nav.Link>
+                                        <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/manageorders">Manage Orders</NavLink></Nav.Link>
                                         <Nav.Link> </Nav.Link>
 
 
 
                                     </Nav>
-                                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" className="rounded-circle" />
+                                    {user.email ?
+                                        <img src={user.photoURL} alt="mdo" width="32" height="32" className="rounded-circle" />
+                                        :
+                                        <img src={userimg} alt="mdo" width="32" height="28" className="rounded-circle" />
 
-                                    <NavDropdown title="hello" className="navbar-list dropdown text-end">
+                                    }
 
-                                        <NavDropdown.Item><NavLink className="navbar-list" activeStyle={activeStyle} to="/shop">Shop</NavLink></NavDropdown.Item>
-                                        <NavDropdown.Item><NavLink className="navbar-list" activeStyle={activeStyle} to="/article">Article</NavLink></NavDropdown.Item>
+                                    <NavDropdown title={user.displayName} className="navbar-list dropdown text-end">
 
+                                        <NavDropdown.Item><NavLink className="navbar-list" activeStyle={activeStyle} to="/login">LogIn</NavLink></NavDropdown.Item>
+                                        <NavDropdown.Item><NavLink className="navbar-list" activeStyle={activeStyle} to="/registration">SignUp</NavLink></NavDropdown.Item>
+                                        {user?.email &&
+                                            <Button onClick={logOut} className="logout-button">LogOut</Button>
+                                        }
                                     </NavDropdown>
                                 </Navbar.Collapse>
 

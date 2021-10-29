@@ -7,10 +7,7 @@
 .main-part-header {
 }
 .navbar-contents {
-  background-image: linear-gradient(
-    rgba(42, 194, 106, 0.911),
-    rgba(10, 61, 30, 0.8)
-  );
+  background-color: rgb(26, 24, 24);
 
   /* sticky or fixed are fine */
 
@@ -24,7 +21,7 @@
 }
 
 .navbar-list {
-  color: #343a40;
+  color: #ffff;
   text-decoration: none;
   font-family: "Playfair Display", serif;
   font-weight: 100;
@@ -41,21 +38,31 @@
   margin-right: 5px;
 }
 .nav-link {
-  color: #343a40;
+  color: #ffff;
 }
 .nav-link:hover {
   color: #fecb2f;
 }
 .dropdown-menu {
-  background-image: linear-gradient(
-    rgba(42, 194, 106, 0.911),
-    rgba(10, 61, 30, 0.8)
-  );
+  background-color: rgb(26, 24, 24);
 }
 .dropdown-item:hover {
   color: #fecb2f;
-  background-image: linear-gradient(
-    rgba(42, 194, 106, 0.911),
-    rgba(10, 61, 30, 0.8)
-  );
+  background-color: rgb(26, 24, 24);
+}
+.navbar-contents {
+  width: 80%;
+}
+.navbar-bg {
+  background-color: rgb(26, 24, 24);
+}
+.logout-button {
+  background-color: rgb(26, 24, 24);
+  border: none;
+  color: white;
+}
+.logout-button:hover {
+  background-color: rgb(26, 24, 24);
+  border: none;
+  color: #fecb2f;
 }
