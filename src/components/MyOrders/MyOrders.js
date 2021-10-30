@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Table } from 'react-bootstrap';
 import './MyOrders.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash, faMinusSquare } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import useOrder from '../../hooks/useOrder';
 import useAuth from '../../hooks/useAuth';
 import { useState } from 'react';
@@ -12,7 +12,7 @@ import { useState } from 'react';
 
 const MyOrders = () => {
     const element = <FontAwesomeIcon icon={faTrash} />
-    const cancelbtn = <FontAwesomeIcon icon={faMinusSquare} />
+
     const { user } = useAuth();
     const [order, setOrder] = useOrder();
 
@@ -78,7 +78,7 @@ const MyOrders = () => {
                                     <td>
                                         <Button onClick={() => handelDeleteOrder(final._id)} data-hover="Delete" className="delete-button" variant="danger">{element}</Button>
 
-                                        <Button data-hover="Cancel" className="cancel-button" variant="warning">{cancelbtn}</Button>
+
 
                                     </td>
                                 </tr>
