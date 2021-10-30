@@ -5,8 +5,11 @@ import { Spinner } from 'react-bootstrap';
 
 //here using rest for store the rest data except children
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user } = useAuth();
 
+    const { user, isLoading } = useAuth();
+    if (isLoading) {
+        return <Spinner animation="border" variant="danger" />
+    }
     return (
 
         <Route

@@ -8,24 +8,24 @@ initializeAuthentication();
 const useFireBase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
+    //loading readirect to login page afte reload
+    const [isLoading, setIsLoading] = useState(true);
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
     const signInUsingGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user)
-            })
-            .catch(error => {
-                setError(error.message)
-            })
+        setIsLoading(true);
+        return signInWithPopup(auth, googleProvider)
+
 
     }
     //signout 
     const logOut = () => {
+        setIsLoading(true);
         signOut(auth)
             .then(() => {
                 setUser({})
             })
+            .finally(() => setIsLoading(false))
     }
     //for state change and user info show
     //when state change then it will save user data
@@ -35,7 +35,10 @@ const useFireBase = () => {
 
                 setUser(user)
             }
-
+            else {
+                setUser({})
+            }
+            setIsLoading(false);
 
         })
     }, [])
@@ -47,7 +50,8 @@ const useFireBase = () => {
         error,
         logOut,
         signInUsingGoogle,
-
+        isLoading,
+        setIsLoading
 
     }
 }

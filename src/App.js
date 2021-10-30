@@ -31,7 +31,7 @@ function App() {
             <Route exact path="/home">
               <Home></Home>
             </Route>
-            <Route path="/placeorder">
+            <Route path="/placeorder/:id">
               <PlaceOrder></PlaceOrder>
             </Route>
             <PrivateRoute path="/myorders">

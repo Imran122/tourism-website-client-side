@@ -3,10 +3,25 @@ import img from '../../../images/body/bg-01.jpg'
 import { Button } from 'react-bootstrap';
 import google from '../../../images/body/google.png'
 import useAuth from '../../../hooks/useAuth';
-
+import { Route, Redirect, useLocation, useHistory } from 'react-router-dom';
+import { useState } from 'react';
 const LogIn = () => {
     //call google use firebase function 
-    const { signInUsingGoogle } = useAuth();
+    const { signInUsingGoogle, isLoading, setIsLoading } = useAuth();
+    //redirect after login
+    const [error, setError] = useState('');
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || './home'
+    const handelGoogleLogIn = () => {
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri)
+            }).catch(error => {
+                setError(error.message)
+            })
+            .finally(() => setIsLoading(false))
+    }
 
     return (
         <div>
@@ -55,7 +70,7 @@ const LogIn = () => {
                         </form>
                         <div class="social-icon">
 
-                            <Button variant="success" onClick={signInUsingGoogle}
+                            <Button variant="success" onClick={handelGoogleLogIn}
                                 className="register-button">
                                 <img className="g-icon" src={google} alt="" />
                                 Google
