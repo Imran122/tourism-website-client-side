@@ -6,18 +6,18 @@ const Packages = () => {
             <div className="Packages-title">
                 <h2><span className="Packages-title-1">Our</span> <span className="Packages-title-2">Discount Packages</span></h2>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5 col-sm-6">
-                        <div class="pricingTable">
-                            <div class="pricing_heading">
-                                <h3 class="title">Single Plan</h3>
-                                <span class="value">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-5 col-sm-6">
+                        <div className="pricingTable">
+                            <div className="pricing_heading">
+                                <h3 className="title">Single Plan</h3>
+                                <span className="value">
                                     $222.99
-                                    <span class="month">4 DAYS</span>
+                                    <span className="month">4 DAYS</span>
                                 </span>
                             </div>
-                            <div class="content">
+                            <div className="content">
                                 <ul>
                                     <li>Breakfast</li>
                                     <li>Lunch</li>
@@ -26,23 +26,23 @@ const Packages = () => {
                                     <li>Business Class Tickit</li>
 
                                 </ul>
-                                <div class="link">
+                                <div className="link">
                                     <a href="#">BUY NOW</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-5 col-sm-6">
-                        <div class="pricingTable">
-                            <div class="pricing_heading">
-                                <h3 class="title">Couple Plan</h3>
-                                <span class="value">
+                    <div className="col-md-5 col-sm-6">
+                        <div className="pricingTable">
+                            <div className="pricing_heading">
+                                <h3 className="title">Couple Plan</h3>
+                                <span className="value">
                                     $422.99
-                                    <span class="month">7 days</span>
+                                    <span className="month">7 days</span>
                                 </span>
                             </div>
-                            <div class="content">
+                            <div className="content">
                                 <ul>
                                     <li>Breakfast</li>
                                     <li>Lunch</li>
@@ -52,7 +52,7 @@ const Packages = () => {
                                     <li>Business Class Tickit</li>
 
                                 </ul>
-                                <div class="link">
+                                <div className="link">
                                     <a href="#">BUY NOW</a>
                                 </div>
                             </div>

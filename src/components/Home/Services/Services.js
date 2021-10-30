@@ -11,11 +11,11 @@ const Services = () => {
 
 
 
-            <div class="container mb-5 mt-3">
+            <div className="container mb-5 mt-3">
 
-                <div class="sec-title text-start">
+                <div className="sec-title text-start">
                     <h2><span className="service-title">PLAN</span> YOUR NEXT STAY</h2>
-                    <div class="text mb-45">
+                    <div className="text mb-45">
                         <h4>Experience the Great Outdoors</h4>
 
                     </div>
@@ -24,7 +24,7 @@ const Services = () => {
 
 
 
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div className="row row-cols-1 row-cols-md-3 g-4">
 
                     {
                         services.map(service => <Service

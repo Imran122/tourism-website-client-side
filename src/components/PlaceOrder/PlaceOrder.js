@@ -1,9 +1,17 @@
 import React from 'react';
+import './PlaceOrder.css';
+import axios from 'axios';
+import img from '../../images/orderbg.jpg'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router';
+import useAuth from '../../hooks/useAuth';
+import { useForm } from "react-hook-form";
 
 const PlaceOrder = () => {
+    //showing user data
+    const { user } = useAuth();
+    //services data load
     const [service, setService] = useState({})
     const { id } = useParams();
     useEffect(() => {
@@ -11,11 +19,76 @@ const PlaceOrder = () => {
             .then(response => response.json())
             .then(data => setService(data))
     }, [])
+
+
+
+    //form data submit method
+
+
+    const { register, handleSubmit } = useForm();
+
+    const onSubmit = data => {
+
+        data.name = user.displayName
+        data.email = user.email;
+        data.servicename = service.name;
+        data.price = service.price;
+        console.log(data)
+        axios.post('http://localhost:5000/orderlist', data)
+            .then(response => {
+                if (response.data.insertedId) {
+                    alert('Inserted success')
+                }
+
+            })
+    }
+
+
+
     return (
-        <div>
-            <h2>place order {id}</h2>
-            <h2>details of {service.name}</h2>
-        </div>
+        <>
+            <div className="order-items  d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <div className="order-main">
+                    <img src={service.picture} className="items-img" alt="..." />
+                    <div className="card-body-order">
+                        <h2 className="title-items">{service.name}</h2>
+                        <p className="items-text">{service.about}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container-order">
+
+                <form id="order" onSubmit={handleSubmit(onSubmit)}>
+
+                    <h3>Place Order Form</h3>
+                    <h4>Make Plan for: <span className="service-order-name">{service.name}</span></h4>
+                    <fieldset>
+                        <input type="text" {...register("name")} defaultValue={user.displayName} />
+                    </fieldset>
+                    <fieldset>
+                        <input type="email" {...register("email")} defaultValue={user.email} />
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" {...register("servicename")} defaultValue={service.name} />
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" {...register("price")} defaultValue={service.price} />
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" {...register("phone")} />
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" {...register("address")} />
+                    </fieldset>
+
+                    <fieldset>
+                        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                    </fieldset>
+
+                </form>
+            </div>
+        </>
     );
 };
 

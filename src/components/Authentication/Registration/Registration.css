@@ -37,12 +37,6 @@ input {
   border: none;
 }
 
-input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
 textarea {
   outline: none;
   border: none;
@@ -69,10 +63,6 @@ button:hover {
   cursor: pointer;
 }
 
-iframe {
-  border: none !important;
-}
-
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
@@ -93,10 +83,7 @@ iframe {
 .container-login {
   width: 100%;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -119,10 +106,7 @@ iframe {
   width: 100%;
   position: relative;
   z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -161,10 +145,7 @@ iframe {
 
 .login-form {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -223,19 +204,12 @@ input.input {
 
 .container-login-form-btn {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
+
   display: flex;
   flex-wrap: wrap;
 }
 
 .login-form-btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
