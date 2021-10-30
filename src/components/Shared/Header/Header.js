@@ -53,10 +53,17 @@ const Header = () => {
                                     >
                                         <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/home">Home</NavLink></Nav.Link>
 
-                                        <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/myorders">My Orders</NavLink></Nav.Link>
-                                        <Nav.Link> </Nav.Link>
-                                        <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/manageorders">Manage Orders</NavLink></Nav.Link>
-                                        <Nav.Link> </Nav.Link>
+
+
+
+                                        {user?.email &&
+                                            <>
+                                                <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/myorders">My Orders</NavLink></Nav.Link>
+                                                <Nav.Link> </Nav.Link>
+                                                <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/manageorders">Manage Orders</NavLink></Nav.Link>
+                                                <Nav.Link> </Nav.Link>
+                                            </>
+                                        }
 
 
 

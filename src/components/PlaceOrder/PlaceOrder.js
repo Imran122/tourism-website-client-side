@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form";
 const PlaceOrder = () => {
     //showing user data
     const { user } = useAuth();
-    //services data load
+    //services data load method
     const [service, setService] = useState({})
     const { id } = useParams();
     useEffect(() => {
@@ -20,11 +20,9 @@ const PlaceOrder = () => {
             .then(data => setService(data))
     }, [])
 
-
-
+    //order status
+    const [status, setStatus] = useState(false)
     //form data submit method
-
-
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
@@ -33,11 +31,12 @@ const PlaceOrder = () => {
         data.email = user.email;
         data.servicename = service.name;
         data.price = service.price;
-        console.log(data)
+        data.status = status
         axios.post('http://localhost:5000/orderlist', data)
             .then(response => {
                 if (response.data.insertedId) {
                     alert('Inserted success')
+
                 }
 
             })
