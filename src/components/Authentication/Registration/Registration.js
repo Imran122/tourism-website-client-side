@@ -3,8 +3,13 @@ import './Registration.css'
 import img from '../../../images/body/bg-01.jpg'
 import { Button } from 'react-bootstrap';
 import google from '../../../images/body/google.png'
+import { useHistory } from 'react-router-dom';
 const Registration = () => {
-
+    //redicret to upgrade page
+    const history = useHistory();
+    const handelUpgradeButton = () => {
+        history.push(`/upgrade`)
+    }
     return (
         <div>
             <div className="limiter">
@@ -45,7 +50,7 @@ const Registration = () => {
                             </div>
 
                             <div className="container-login-form-btn">
-                                <button className="login-form-btn">
+                                <button onClick={handelUpgradeButton} className="login-form-btn">
                                     Login
                                 </button>
                             </div>

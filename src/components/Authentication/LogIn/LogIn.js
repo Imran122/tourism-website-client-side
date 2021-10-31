@@ -5,6 +5,7 @@ import google from '../../../images/body/google.png'
 import useAuth from '../../../hooks/useAuth';
 import { Route, Redirect, useLocation, useHistory } from 'react-router-dom';
 import { useState } from 'react';
+
 const LogIn = () => {
     //call google use firebase function 
     const { signInUsingGoogle, isLoading, setIsLoading } = useAuth();
@@ -22,7 +23,11 @@ const LogIn = () => {
             })
             .finally(() => setIsLoading(false))
     }
+    //redicret to upgrade page
 
+    const handelUpgradeButton = () => {
+        history.push(`/upgrade`)
+    }
     return (
         <div>
             <div className="limiter">
@@ -63,7 +68,7 @@ const LogIn = () => {
                             </div>
 
                             <div className="container-login-form-btn">
-                                <button className="login-form-btn">
+                                <button onClick={handelUpgradeButton} className="login-form-btn">
                                     Login
                                 </button>
                             </div>

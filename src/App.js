@@ -18,6 +18,7 @@ import ManageOrders from './components/ManageOrders/ManageOrders';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddService from './components/AddService/AddService';
+import Upgrade from './components/Upgrade/Upgrade';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             </Route>
             <Route exact path="/home">
               <Home></Home>
+            </Route>
+            <Route exact path="/upgrade">
+              <Upgrade></Upgrade>
             </Route>
             <Route path="/addservice">
               <AddService></AddService>
