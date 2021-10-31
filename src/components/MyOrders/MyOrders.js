@@ -31,7 +31,7 @@ const MyOrders = () => {
     const handelDeleteOrder = id => {
         const proceed = window.confirm('Are you sure you want to delete?')
         if (proceed) {
-            const url = `http://localhost:5000/orderlist/${id}`;
+            const url = `https://wicked-castle-46477.herokuapp.com/orderlist/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
