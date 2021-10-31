@@ -1,6 +1,6 @@
 import React from 'react';
 import './Banner.css'
-import img from '../../../images/header/tour.png'
+import img from '../../../images/header/tour.jpg'
 const Banner = () => {
     return (
         <div>
@@ -11,7 +11,7 @@ const Banner = () => {
                             <img src={img} className="img-fluid" alt="Web Development" />
                         </div>
                         <div className="col-lg-6">
-                            <h1 className="mt-3 banner-text-main">Island Trips Planner</h1>
+                            <h1 className="mt-3 banner-text-main">Island <span className="trips-texts">Trips  Planner</span></h1>
                             <p className="lead banner-text  my-5">Island Trips -Make Plan & explore  beautiful paradise islands.</p>
                             <a href="#" className="btn btn-outline-secondary btn-lg border banner-button">Order Now</a>
                         </div>

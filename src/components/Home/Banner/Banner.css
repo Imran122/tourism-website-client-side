@@ -6,10 +6,26 @@
   background-size: cover;
   background-position: center;
 }
-.banner-text-main {
-  color: #fff;
-  font-family: "Playfair Display", serif;
+.img-fluid {
+  border-radius: 5px;
+  border: 4px outset #fecb2f;
+  box-shadow: 10px 10px 5px rgba(236, 224, 116, 0.5);
 }
+.trips-texts {
+  color: #fecb2f;
+  font-family: "Playfair Display", serif;
+  margin-left: 3px;
+}
+.trips-texts:hover {
+  color: #01a479;
+}
+.banner-text-main {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Dela Gothic One", cursive;
+}
+/* animation css */
+
 .banner-text {
   color: #fff;
 }
@@ -20,7 +36,7 @@
   color: #fecb2f;
 }
 .hero-banner h1 {
-  font-size: 48px;
+  font-size: 35px;
 }
 .hero-banner .btn {
   position: relative;
