@@ -72,7 +72,7 @@ const LogIn = () => {
 
                             <Button variant="success" onClick={handelGoogleLogIn}
                                 className="register-button">
-                                <img className="g-icon" src={google} alt="" />
+                                <img className="g-icon" src={google} alt="" disabled />
                                 Google
                             </Button>
                         </div>

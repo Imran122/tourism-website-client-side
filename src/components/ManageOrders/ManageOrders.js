@@ -32,7 +32,26 @@ const ManageOrders = () => {
         }
     }
     //confirmation status change method
+    const handelApproveOrder = id => {
 
+        const url = `https://wicked-castle-46477.herokuapp.com/orderlist/${id}`;
+        console.log(url)
+        fetch(url, {
+            method: 'PUT',
+        })
+            .then(response => response.json())
+            .then(data => {
+                let updateOrder = [...order]
+                console.log(updateOrder)
+                for (let i = 0; i < updateOrder.length; i++) {
+                    if (updateOrder[i]._id === id) {
+                        updateOrder[i].status = true;
+                    }
+
+                }
+                setOrder(updateOrder)
+            })
+    }
     return (
         <div className="table-data">
             <Table striped bordered hover variant="dark">
@@ -62,7 +81,7 @@ const ManageOrders = () => {
                                         <>
                                             <td>
                                                 Pending
-                                                <Button className="confirm-button">Approve</Button>
+                                                <Button onClick={() => handelApproveOrder(final._id)} className="confirm-button">Approve</Button>
                                             </td>
 
 
