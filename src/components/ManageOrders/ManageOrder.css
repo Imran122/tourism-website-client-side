@@ -1,0 +1,10 @@
+.confirm-button {
+  margin-left: 10px;
+  background-color: #f6c635;
+  border: 1px solid #634c07;
+  color: black;
+}
+.confirm-button:hover {
+  background-color: rgb(26, 24, 24);
+  border: 1px solid #634c07;
+}
