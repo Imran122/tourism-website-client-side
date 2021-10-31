@@ -63,16 +63,16 @@ const PlaceOrder = () => {
                     <h3>Place Order Form</h3>
                     <h4>Make Plan for: <span className="service-order-name">{service.name}</span></h4>
                     <fieldset>
-                        <input type="text" {...register("name")} defaultValue={user.displayName} />
+                        <input type="text" {...register("name")} defaultValue={user.displayName} disabled />
                     </fieldset>
                     <fieldset>
-                        <input type="email" {...register("email")} defaultValue={user.email} />
+                        <input type="email" {...register("email")} defaultValue={user.email} disabled />
                     </fieldset>
                     <fieldset>
-                        <input type="text" {...register("servicename")} defaultValue={service.name} />
+                        <input type="text" {...register("servicename")} defaultValue={service.name} disabled />
                     </fieldset>
                     <fieldset>
-                        <input type="text" {...register("price")} defaultValue={service.price} />
+                        <input type="text" {...register("price")} defaultValue={service.price} disabled />
                     </fieldset>
                     <fieldset>
                         <input type="text" {...register("phone")} />
