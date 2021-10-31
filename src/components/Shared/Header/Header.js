@@ -52,6 +52,7 @@ const Header = () => {
                                         navbarScroll
                                     >
                                         <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/home">Home</NavLink></Nav.Link>
+                                        <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/addservice">Add Service</NavLink></Nav.Link>
 
 
 

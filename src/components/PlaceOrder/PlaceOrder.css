@@ -4,6 +4,10 @@
   margin: 0 auto;
   position: relative;
 }
+.price {
+  font-size: 18px;
+  color: rgb(26, 24, 24);
+}
 .order-items {
   width: 100%;
   margin-bottom: 0px;

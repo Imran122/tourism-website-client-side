@@ -23,7 +23,7 @@ const PlaceOrder = () => {
     //order status
     const [status, setStatus] = useState(false)
     //form data submit method
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
 
@@ -36,7 +36,7 @@ const PlaceOrder = () => {
             .then(response => {
                 if (response.data.insertedId) {
                     alert('Inserted success')
-
+                    reset()
                 }
 
             })
@@ -50,7 +50,7 @@ const PlaceOrder = () => {
                 <div className="order-main">
                     <img src={service.picture} className="items-img" alt="..." />
                     <div className="card-body-order">
-                        <h2 className="title-items">{service.name}</h2>
+                        <h2 className="title-items">{service.name} <span className="price">${service.price}</span></h2>
                         <p className="items-text">{service.about}</p>
                     </div>
                 </div>
