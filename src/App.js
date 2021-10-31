@@ -36,9 +36,9 @@ function App() {
             <Route exact path="/upgrade">
               <Upgrade></Upgrade>
             </Route>
-            <Route path="/addservice">
+            <PrivateRoute path="/addservice">
               <AddService></AddService>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/placeorder/:id">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>

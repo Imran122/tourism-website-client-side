@@ -37,7 +37,7 @@ const AddService = () => {
                             </div>
                             <div className="wrap-input validate-input m-b-26" data-validate="details is required">
                                 <span className="label-input">About Service</span>
-                                <input {...register("about")} className="input" type="text" name="about" placeholder="Enter about services" />
+                                <textarea {...register("about")} className="input" type="text" name="about" placeholder="Enter about services" rows="4" cols="50"> </textarea>
                                 <span className="focus-input"></span>
                             </div>
 
