@@ -7,7 +7,7 @@ const AddService = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('https://wicked-castle-46477.herokuapp.com/services', data)
+        axios.post('http://localhost:5000/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Inserted service was successfully')
@@ -25,18 +25,18 @@ const AddService = () => {
                     <div className="wrap-login">
                         <div className="login-form-title" style={{ backgroundImage: `url(${img})` }}>
                             <span className="login-form-title-1">
-                                ADD SERVICE
+                                ADD SPOTS
                             </span>
                         </div>
 
                         <form onSubmit={handleSubmit(onSubmit)} className="login-form validate-form">
                             <div className="wrap-input validate-input m-b-26" data-validate="name is required">
-                                <span className="label-input">Service Name</span>
+                                <span className="label-input">Spot`s Name</span>
                                 <input {...register("name")} className="input" type="text" name="name" placeholder="Enter name" />
                                 <span className="focus-input"></span>
                             </div>
                             <div className="wrap-input validate-input m-b-26" data-validate="details is required">
-                                <span className="label-input">About Service</span>
+                                <span className="label-input">About Spot</span>
                                 <textarea {...register("about")} className="input" type="text" name="about" placeholder="Enter about services" rows="4" cols="50"> </textarea>
                                 <span className="focus-input"></span>
                             </div>

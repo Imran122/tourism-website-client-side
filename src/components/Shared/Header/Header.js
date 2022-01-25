@@ -30,7 +30,7 @@ const Header = () => {
                     <Row className="justify-content-md-center">
                         <Col><p>234/dhanmondi, Dhaka, Bangladesh, BD</p></Col>
                         <Col><p>Mon - Sat 8.00 - 18.00. Sunday CLOSED</p></Col>
-                        <Col lg="2" className="office"><p>ISLAND TRAVEL PLANNER</p></Col>
+                        <Col lg="2" className="office"><p>A TRAVEL AGENCY</p></Col>
                     </Row>
                 </Container>
             </div>
@@ -52,7 +52,7 @@ const Header = () => {
                                         navbarScroll
                                     >
                                         <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/home">Home</NavLink></Nav.Link>
-                                        <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/addservice">Add Service</NavLink></Nav.Link>
+                                        <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/addservice">Add Spots</NavLink></Nav.Link>
 
 
 

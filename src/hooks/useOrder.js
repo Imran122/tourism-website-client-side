@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 const useOrder = () => {
     const [order, setOrder] = useState([])
     useEffect(() => {
-        fetch('https://wicked-castle-46477.herokuapp.com/orderlist')
+        fetch('http://localhost:5000/orderlist')
             .then(response => response.json())
             .then(data => setOrder(data))
     }, [])

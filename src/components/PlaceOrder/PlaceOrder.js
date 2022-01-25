@@ -15,7 +15,7 @@ const PlaceOrder = () => {
     const [service, setService] = useState({})
     const { id } = useParams();
     useEffect(() => {
-        fetch(`https://wicked-castle-46477.herokuapp.com/services/${id}`)
+        fetch(`http://localhost:5000/services/${id}`)
             .then(response => response.json())
             .then(data => setService(data))
     }, [])
@@ -32,7 +32,7 @@ const PlaceOrder = () => {
         data.servicename = service.name;
         data.price = service.price;
         data.status = status
-        axios.post('https://wicked-castle-46477.herokuapp.com/orderlist', data)
+        axios.post('http://localhost:5000/orderlist', data)
             .then(response => {
                 if (response.data.insertedId) {
                     alert('Inserted success')

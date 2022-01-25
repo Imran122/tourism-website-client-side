@@ -11,7 +11,7 @@ const Packages = () => {
                     <div className="col-md-5 col-sm-6">
                         <div className="pricingTable">
                             <div className="pricing_heading">
-                                <h3 className="title">Single Plan</h3>
+                                <h3 className="title">Single Person</h3>
                                 <span className="value">
                                     $222.99
                                     <span className="month">4 DAYS</span>
@@ -36,7 +36,7 @@ const Packages = () => {
                     <div className="col-md-5 col-sm-6">
                         <div className="pricingTable">
                             <div className="pricing_heading">
-                                <h3 className="title">Couple Plan</h3>
+                                <h3 className="title">Couple Person</h3>
                                 <span className="value">
                                     $422.99
                                     <span className="month">7 days</span>

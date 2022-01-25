@@ -9,7 +9,7 @@ const Footer = () => {
                 <footer>
                     <Row>
                         <Col sm={4} lg={4}>
-                            <h4 className="footer-title">Island Trips Planner</h4>
+                            <h4 className="footer-title">BD TRAVEL AGENCY</h4>
                             <ul className="list-unstyled">
                                 <li>0177854444</li>
                                 <li>dhanmondi,Dhaka</li>
@@ -35,7 +35,7 @@ const Footer = () => {
                     </Row>
                     <div className="row">
                         <p className="col-sm" className="last-content-footer">
-                            @{new Date().getFullYear()} Island Trips Planner | All right Reserved | Terms & Service | Privacy
+                            @{new Date().getFullYear()} Bd travel agency | All right Reserved | Terms & Service | Privacy
                         </p>
                     </div>
                 </footer>

@@ -9,9 +9,9 @@ const Guide = () => {
                 <div className="grid">
                     <div className="half-grid">
                         <div className="text-box">
-                            <h2>Best Guider</h2>
+                            <h2>CEO, BD TRAVEL AGENCY</h2>
                             <h4>EMA WATSON</h4>
-                            <p>Ema watson,is the best guider of the month</p>
+                            <p>Ema watson,is the founder and CEO of the agency</p>
                         </div>
                     </div>
                     <div className="half-grid" style={{ backgroundImage: `url(${img})` }}>

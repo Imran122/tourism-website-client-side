@@ -5,7 +5,7 @@ const useService = () => {
     const [services, setServices] = useState([])
     //fetch data from fajedb json file
     useEffect(() => {
-        fetch('https://wicked-castle-46477.herokuapp.com/services')
+        fetch('http://localhost:5000/services')
             .then(response => response.json())
             .then(data => setServices(data))
     }, [])

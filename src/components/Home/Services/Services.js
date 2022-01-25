@@ -14,9 +14,9 @@ const Services = () => {
             <div className="container mb-5 mt-3">
 
                 <div className="sec-title text-start">
-                    <h2><span className="service-title">PLAN</span> YOUR NEXT STAY</h2>
+                    <h2><span className="service-title">BEST</span> TRAVEL SPOTS</h2>
                     <div className="text mb-45">
-                        <h4>Experience the Great Outdoors</h4>
+                        <h4>Make Experience With Us</h4>
 
                     </div>
                 </div>
